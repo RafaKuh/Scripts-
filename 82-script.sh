@@ -12,8 +12,7 @@ mkdir ~/xz
 cd ~/zip
 
 # Download files
-wget http://brazil.minnesota.edu/cptr2224/cptr2224/2224l01.pdf
-wget http://brazil.minnesota.edu/cptr2224/cptr2224/2224l02.pdf
+wget  "PUT A WEBSITE HERE"
 
 #Copy to other directories
 cp ~/zip/*.pdf ~/gzip
