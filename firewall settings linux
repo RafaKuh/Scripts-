@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#This will document firewalld settings
+#
+
+sudo firewall-cmd --list-all
+document-firewalld.sh (END)
