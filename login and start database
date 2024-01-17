@@ -1,0 +1,12 @@
+REM This will do the logon and start the database 
+
+REM net use /?
+REM Murillo 10/26/2023
+
+REM This is the logon for alpha
+net use b:  \\192.168.0.0\"YOUR OU" /user:username@mait.minnesota.edu
+
+REM This is the logon for bravo
+net use b: \\"SERVER IP LIKE ABOVE"\"YOUR OU" /user:usernameh@mait.minnesota.edu
+pause
+net use b: /delete
