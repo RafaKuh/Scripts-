@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This will create a new directory, a file named after each group, and cange group owner ship.
+# This script must be run as root.
+# Murillo 11/4/2023
+
+
+mkdir ~/grp
+
+cat /etc/group >> /tmp/group.txt
+
+awk -F":" '{ print $1 }' /tmp/groupt.txt > /tmp/doc73.txt
+
+
+FILE="/tmp/doc73.txt"
+ while read LINE
+    do
+    touch "$HOME/grp/$LINE"
+
+    sudo chgrp $LINE "$HOME/grp/$LINE"
+done <"$FILE"
+
+ls -l $HOME/grp/* >> lab_answer.txt
+
+chmod 444 lab_answer.txt
