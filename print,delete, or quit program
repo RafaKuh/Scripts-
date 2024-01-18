@@ -1,0 +1,25 @@
+#!/bin/bash
+# Name: $0.sh
+# Purpose: Allow human to print,delete, or quit program
+
+# Display Menu
+echo "Plase choose either P,D, or Q to"
+echo "[P]rint a file"
+echo "[D]elete a file"
+echo "[Q]uit"
+
+# Get a response from the human
+read RESPONSE
+
+#Use case to match response to action
+case $RESPONSE in
+P|p) echo "Name of file to print?"
+    ls
+    read FILENAME
+    cat $FILENAME;;
+D|d) echo "Name of file to delete?"
+    ls
+    read FILENAME
+    mv $FILENAME /tmp/$FILENAME;;
+*) echo "I am leaving you, human!";;
+esac
