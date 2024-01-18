@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This is a silly login request.
+#
+# Murillo 11/4/2023
+
+if [ $# -ne 2 ];
+    then
+        echo "Silly human, you need a login and database"
+        echo "Go read your fortune"
+        fortune
+    exit
+fi
+DB_USER=$1
+DB_TABLE=$2
+
+echo $DB_USER
+echo $DB_TABLE
