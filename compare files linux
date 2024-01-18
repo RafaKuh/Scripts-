@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# This completets the CPTR 2224 Lab 5.3 fall 2023.
+# ss64.com
+# Murillo 11/4/2023
+
+
+echo "This is the current date and time." >> /tmp/doc52.txt
+date >> /tmp/doc52.txt
+echo "Comparing files /tmp/doc51.txt and /tmp/doc52.txt:"
+cmp /tmp/doc51.txt /tmp/doc52.txt
+echo "Differences between /tmp/doc51.txt and /tmp/doc52.txt:"
+diff /tmp/doc51.txt /tmp/doc52.txt
+echo "Number of words in /tmp/doc51.txt:"
+wc -w < /tmp/doc51.txt
+echo "Number of words in /tmp/doc52.txt:"
+wc -w < /tmp/doc52.txt
+
+echo "This is the source code."
+cat $0 > /tmp/doc53.txt
