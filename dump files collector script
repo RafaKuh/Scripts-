@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# This collects core dump files and create file with directory sizes
+#
+# Murillo 11/4/2023
+
+touch /home/"yourname"/core
+file /home -nmae core -execdir rm '{}' \;
+du /home >> /tmp/home_sizes.txt
+less /tmp/home_sizes.txt
