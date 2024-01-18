@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# This does CPTR 2224 Lab 6.4 fall 2023.
+
+# Murillo 11/7/2023
+
+
+
+
+
+# Function to check if the login name meets criteria
+check_login_name() {
+    local login_name=$1
+
+    # Check for only letters and numbers
+    if ! [[ $login_name =~ ^[a-zA-Z0-9]+$ ]]; then
+        echo "The login name is not valid: it should contain only letters and numbers."
+        return 1
+    fi
+
+    # Check for length not greater than 20 characters
+    if [ ${#login_name} -gt 20 ]; then
+        echo "The login name is not valid: it should be no more than 20 characters long."
+        return 1
+    fi
+
+    echo "The login name is valid."
+    return 0
+}
+
+# Main script starts here
+echo "Please enter a login name:"
+read login_name
+
+# Call the function to check the login name
+check_login_name "$login_name"
+
+cat $0 >> nscript64output.txt
+
