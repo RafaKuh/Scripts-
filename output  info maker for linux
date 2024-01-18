@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This completets the CPTR 2224 Lab 5.1 fall 2023.
+# ss64.com
+# Murillo 11/4/2023
+
+echo "This is the current date and time." >> /tmp/doc51.txt
+date >> /tmp/doc51.txt
+echo "This is the lscpu out." >> /tmp.doc51.txt
+lscpu >> /tmp/doc51.txt
+echo "this is the lsscsi output." >> /tmp/doc51.txt
+lsscsi >> /tmp/doc51.txt
+echo "This is the lsusb output." >> /tmp/doc51.txt
+lsusb -v >> /tmp/doc51.txt
+echo "This is the ip route show all output." >> /tmp/doc51.txt
+ip route show all >> /tmp/doc51.txt
+echo "This is the netstat listening ports output." >> /tmp/doc51.txt
+netstat >> /tmp/doc51.txt
+echo "This is the uname output." >> /tmp.doc51.txt
+uname -a >> /tmp/doc51.txt
+echo "This is the fortune command." >> /tmp/doc51.txt
+fortune >> /tmp/doc51.txt
+
+echo "This is the source code."
+cat $0 >> /tmp/doc51.txt
