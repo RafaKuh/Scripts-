@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# This script downloads some victims files,
+# creates directories, compress, and reports.
+#  Murillo III 11/4/2023
+# Creates directories
+
+mkdir ~/zip
+mkdir ~/gzip
+mkdir ~/bzip2
+mkdir ~/xz
+cd ~/zip
+
+# downloads files - or you can put any website , but this was used as a example
+wget http://brazil.minnesota.edu/cptr2224/cptr2224/2224l01.pdf
+
+# copy to other directories
+cp ~/zip/*.pdf ~/gzip
+cp ~/zip/*.pdf ~/bzip2
+cp ~/zip/*.pdf ~/xz
+
+# gzip the ~/zip directory
+echo "Hey these are zip fles." >> ~/compress_report01.txt
+zip -v answer.zip *
+rm *.pdf
+ls -la ~/zip/* >> ~/compress_report01.txt
+echo "Hey these are unzip files." >> ~/compress_report01.txt
+unzip -v answer.zip *
+ls -la ~/zip/* >> ~/compress_report01.txt
+
+# Add the source code
+cat ~/scripts/$0 >> ~/compress_report01.txt
+
+# Show the results
+cat ~/compress_reports01.txt
