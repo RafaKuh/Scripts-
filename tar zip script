@@ -1,0 +1,19 @@
+#!/bin/bash
+# This requires a valid login name
+# this is a tar zip of the login's home direcotry
+echo "Enter a valid login name to process:"
+read THENAME
+if [ -d /home/$THENAME ];
+    then
+        echo "This is a valid login name."
+        echo "Good job, human."
+    else
+        echo "This is an invalid login name."
+        exit
+fi
+
+# We will no create a tar zip of the $THENAME directory
+tar -czvf /tmp/"THENAME"_archive.tgz /home/"$THENAME"/*
+sha512sum /tmp/"THENAME"_archive.tgz > /
+tmp/"$THENAME"_archvie.tgz.sha512sum
+echo "All Done"
