@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# This does part of CPTR 2224 Lab 5.4 fall 2023
+# Murillo 11/4/2023
+
+echo "This is the output of /proc/modules" >> answer54.txt
+cat /proc/modules >> answer54.txt
+echo "This is the CPU information:" >> answer54.txt
+cat /proc/cpuinfo >> answer54.txt
+echo "This is the Memory information:" >> answer54.txt
+cat /proc/meminfo >> answer54.txt
+echo "This is the version of the Kernel:" >> answer54.txt
+cat /proc/version >> answer54.txt
+echo "This is the load average information:" >> answer54.txt
+cat /proc/loadavg >> answer54.txt
+echo "This is the list of modules:" >> answer54.txt
+cat /proc/modules >> answer54.txt
+echo "This is the current date and time:" >> answer54.txt
+date >> answer54.txt
+echo "This is the fortune command output:" >> answer54.txt
+fortune >> answer54.txt
+
+echo "This is the source code" >> answer54.txt
+cat $0 > answer54.txt
