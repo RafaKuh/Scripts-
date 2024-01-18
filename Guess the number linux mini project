@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#This will do CPTR 2224 lab 6.1 fall 2023.
-# AI (ChatGPT)  was used for assistance to build this script.
-# Preuss startup layout was used.
 #Murillo 11/7/2023
 
 # Prompt the user for a guess
