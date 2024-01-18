@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script will document the SHA2-256 hash values.
+# This script will verify the SHA2-256 hash values.
+# man sha256
+# Murillo 11/4/2023
+
+clear
+echo "We are collecting the SHA2-256 values"
+sha256sum ~/scripts1/* > ~/scripts1/sha256sums.txt
+echo "We are checking file hash values"
+sha256sum -c ~/scripts1/sha256sums.txt
+echo "Done"
