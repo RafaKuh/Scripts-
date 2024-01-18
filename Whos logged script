@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Display who is loggin in and date
+# Tackett example
+# Murillo 11/4/2023
+
+echo "Let use who is logged in"
+who # See who is logged in
+echo "Display date"
+date
+echo "Display seconds since 1-1-1970"
+date +%s
