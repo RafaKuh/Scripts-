@@ -1,0 +1,17 @@
+#!/bin/bash
+# This verifies the archive for a login
+# man pages
+# Murillo 11/4/2023
+
+echo Enter a valid home directory name to process:
+read THENAME
+
+if [ -f /tmp/"$THENAME"_archive.tgz ];
+    then
+        echo This is a valid login archive.
+        cd /tmp
+        SHA512SUM -C "$THENAME"_archive.tgz.sha512sum
+    else
+        echo This is not a valid login directory
+    fi
+echo 'All Done'
