@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# This will install Apache Web Server on Debian 12
+# Referenced guides for instructions:
+# https://reinvent.io/blog/installing-apache-on-debian-12-step-by-step-guide
+# https://devtutorial.io/how-to-install-lets-encrypt-ssl-in-apache-on-debian-12-p3131.html
+
+# Update system packages
+echo "First Update"
+sudo apt update
+sudo apt upgrade
+
+# Install Apache
+echo "Install Apache"
+sudo apt install apache2
+
+# Set Apache to start automatically
+echo "Set Apache to auto start"
+sudo systemctl enable apache2
+sudo systemctl start apache2
+
+# Check Apache status
+echo "Check Apache status"
+sudo systemctl status apache2
+
+# Configure the firewall
+echo "Configure Firewall"
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --add-service=https --permanent
+sudo firewall-cmd --reload
+
+# Install certbot for Let's Encrypt SSL
+echo "Install certbot"
+sudo apt install certbot python3-certbot-apache
+
+# Configure Apache to use SSL
+echo "Configure Apache to use SSL"
+sudo a2enmod ssl
+
+# Restart Apache to apply changes
+echo "Restart Apache"
+sudo systemctl restart apache2
